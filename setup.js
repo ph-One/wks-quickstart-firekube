@@ -8,7 +8,7 @@ const numNodes = config => config.controlPlane.nodes + config.workers.nodes;
 
 const backend = {
   docker: {
-    image: 'quay.io/footloose/clearlinux',
+    image: 'quay.io/footloose/centos7:0.6.0',
     // The below is required for dockerd to run smoothly.
     // See also: https://github.com/weaveworks/footloose#running-dockerd-in-container-machines
     privileged: true,
