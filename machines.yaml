@@ -49,24 +49,6 @@ items:
         apiVersion: baremetalproviderspec/v1alpha1
         kind: BareMetalMachineProviderSpec
         private:
-          address: 172.17.0.3
-          port: 22
-        public:
-          address: 127.0.0.1
-          port: 2223
-- apiVersion: cluster.k8s.io/v1alpha1
-  kind: Machine
-  metadata:
-    labels:
-      set: worker
-    name: worker-0
-    namespace: weavek8sops
-  spec:
-    providerSpec:
-      value:
-        apiVersion: baremetalproviderspec/v1alpha1
-        kind: BareMetalMachineProviderSpec
-        private:
           address: 172.17.0.4
           port: 22
         public:
@@ -77,7 +59,7 @@ items:
   metadata:
     labels:
       set: worker
-    name: worker-1
+    name: worker-0
     namespace: weavek8sops
   spec:
     providerSpec:
@@ -95,7 +77,7 @@ items:
   metadata:
     labels:
       set: worker
-    name: worker-2
+    name: worker-1
     namespace: weavek8sops
   spec:
     providerSpec:
@@ -113,7 +95,7 @@ items:
   metadata:
     labels:
       set: worker
-    name: worker-3
+    name: worker-2
     namespace: weavek8sops
   spec:
     providerSpec:
@@ -131,7 +113,7 @@ items:
   metadata:
     labels:
       set: worker
-    name: worker-4
+    name: worker-3
     namespace: weavek8sops
   spec:
     providerSpec:
@@ -149,7 +131,7 @@ items:
   metadata:
     labels:
       set: worker
-    name: worker-5
+    name: worker-4
     namespace: weavek8sops
   spec:
     providerSpec:
@@ -167,7 +149,7 @@ items:
   metadata:
     labels:
       set: worker
-    name: worker-6
+    name: worker-5
     namespace: weavek8sops
   spec:
     providerSpec:
@@ -180,4 +162,22 @@ items:
         public:
           address: 127.0.0.1
           port: 2230
+- apiVersion: cluster.k8s.io/v1alpha1
+  kind: Machine
+  metadata:
+    labels:
+      set: worker
+    name: worker-6
+    namespace: weavek8sops
+  spec:
+    providerSpec:
+      value:
+        apiVersion: baremetalproviderspec/v1alpha1
+        kind: BareMetalMachineProviderSpec
+        private:
+          address: 172.17.0.11
+          port: 22
+        public:
+          address: 127.0.0.1
+          port: 2231
 kind: List
